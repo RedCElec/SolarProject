@@ -1,0 +1,30 @@
+.customMenu {
+  position: relative;
+  /* min-height: 200px; */
+  background-image: rgba(0, 0, 0, 0.801);
+  z-index: 1;
+}
+
+.customMenu::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 1%, 0.452),
+    hsla(31, 13%, 63%, 0.185)
+  ); */
+  background-image: radial-gradient(ellipse at center, 
+    hsla(0, 0%, 1%, 0.747),
+    hsla(31, 13%, 63%, 0.185)
+  );
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 1;
+}
+.customMenu:hover::before {
+  opacity: 0.6;
+}
